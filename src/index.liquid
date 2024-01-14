@@ -1,0 +1,162 @@
+---
+title: Home
+description: Welcome
+layout: base
+---
+
+<h2 id="basic-typography">Rock Creek State Park</h2>
+
+<p>All the typography of Simple.css uses <code class="language-plaintext highlighter-rouge">rem</code> for sizing. This means that accessibility is maintained for those who change their browser font size. The <code class="language-plaintext highlighter-rouge">body</code> element has a size of <code class="language-plaintext highlighter-rouge">1.15rem</code>  which makes all the standard font sizes slightly larger. This equates to <code class="language-plaintext highlighter-rouge">18.4px</code> for paragraph text, instead of the standard <code class="language-plaintext highlighter-rouge">16px</code>.</p>
+
+<p>The heading elements also have an increased top margin in order to break blocks of text up better.</p>
+
+<h1 id="heading-1-3rem">Heading 1 <code class="language-plaintext highlighter-rouge">3rem</code></h1>
+
+<h2 id="heading-2-26rem">Heading 2 <code class="language-plaintext highlighter-rouge">2.6rem</code></h2>
+
+<h3 id="heading-3-2rem">Heading 3 <code class="language-plaintext highlighter-rouge">2rem</code></h3>
+
+<h4 id="heading-4-144rem">Heading 4 <code class="language-plaintext highlighter-rouge">1.44rem</code></h4>
+
+<h5 id="heading-5-115rem">Heading 5 <code class="language-plaintext highlighter-rouge">1.15rem</code></h5>
+
+<h6 id="heading-6-096rem">Heading 6 <code class="language-plaintext highlighter-rouge">0.96rem</code></h6>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h2&gt;This is a H2 header&lt;h2&gt;
+
+&lt;p&gt;This is some paragraph text.&lt;/p&gt;
+</code></pre></div></div>
+
+<h3 id="links--buttons">Links &amp; Buttons</h3>
+
+<p>Links are formatted very simply on Simple.css (shock horror). They use the <code class="language-plaintext highlighter-rouge">accent</code> CSS variable and are underlined. There is a <code class="language-plaintext highlighter-rouge">:hover</code> effect that removes the underline.</p>
+
+<p>Buttons use the same <code class="language-plaintext highlighter-rouge">accent</code> CSS variable for their colour. When hovering, there is an opacity effect.</p>
+
+<p><a href="https://example.com">I’m a hyperlink</a></p>
+
+<p><button>I’m a button</button></p>
+
+<p><a class="button" href="https://example.com">I’m a button with a link</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;a href="https://example.com"&gt;I'm a hyperlink&lt;/a&gt;
+
+&lt;button&gt;I'm a button&lt;/button&gt;
+
+&lt;a class="button" href="https://example.com"&gt;I'm a button with a link&lt;/a&gt;
+</code></pre></div></div>
+
+<h2 id="other-typography-elements">Other typography elements</h2>
+
+<p>There are a number of other typography elements that you can use with Simple.css. Some of the common ones are:</p>
+
+<ul>
+  <li>All the standard stuff, like <strong>bold</strong>, <em>italic</em> and <u>underlined</u> text.</li>
+  <li><mark>Highlighting text</mark> using the <code class="language-plaintext highlighter-rouge">mark</code> element.</li>
+  <li>Adding <code class="language-plaintext highlighter-rouge">inline code</code> using the <code class="language-plaintext highlighter-rouge">code</code> element.</li>
+  <li>Displaying keyboard commands like <kbd>ALT+F4</kbd> using the <code class="language-plaintext highlighter-rouge">kbd</code> element.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;b&gt;Bold text&lt;/b&gt;
+&lt;i&gt;Italic text&lt;/i&gt;
+&lt;u&gt;Underlined text&lt;/u&gt;
+&lt;mark&gt;Highlighted text&lt;/mark&gt;
+&lt;code&gt;Inline code&lt;/code&gt;
+&lt;kbd&gt;Alt+F4&lt;/kbd&gt;
+</code></pre></div></div>
+
+<h3 id="lists">Lists</h3>
+
+<p>We all love a good list, right? I know my wife does!</p>
+
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+<ol>
+  <li>Do this thing</li>
+  <li>Do that thing</li>
+  <li>Do the other thing</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Bulleted list
+&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+
+# Numbered list
+&lt;ol&gt;
+  &lt;li&gt;Do this thing&lt;/li&gt;
+  &lt;li&gt;Do that thing&lt;/li&gt;
+  &lt;li&gt;Do the other thing&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre></div></div>
+<h3 id="blockquotes">Blockquotes</h3>
+
+<p>Sometimes you may want to quote someone else in your HTML. For this we use the <code class="language-plaintext highlighter-rouge">blockquote</code> element. Here’s what a quote looks like with Simple.css:</p>
+
+<blockquote>
+  <p>Friends don’t spy; true friendship is about privacy, too.</p>
+
+  <p><cite>– Stephen King</cite></p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;blockquote&gt;
+  &lt;p&gt;Friends don’t spy; true friendship is about privacy, too.&lt;/p&gt;
+  &lt;p&gt;&lt;cite&gt;– Stephen King&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</code></pre></div></div>
+
+<h3 id="code-blocks">Code blocks</h3>
+
+<p>Code blocks are different from the inline <code class="language-plaintext highlighter-rouge">code</code> element. Code blocks are used when you want to display a block of code, like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>body {
+  color: var(--text);
+  background: var(--bg);
+  font-size: 1.15rem;
+  line-height: 1.5;
+  margin: 0;
+}
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre&gt;
+&lt;code&gt;
+  body {
+    color: var(--text);
+    background: var(--bg);
+    font-size: 1.15rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+&lt;/code&gt;
+&lt;/pre&gt;
+</code></pre></div></div>
+
+<h2 id="other-html-elements">Other HTML elements</h2>
+
+<p>There are other HTML elements that are formatted in Simple.css. If you think there should be more added, please <a href="https://github.com/kevquirk/simple.css/issues">log an issue on Github</a></p>
+
+<h3 id="notice-box">Notice box</h3>
+
+<p class="notice">This is a notice box. It’s useful for calling out snippets of information. Cool, huh?</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p class="notice"&gt;This is a notice box. It's useful for calling out snippets of information. Cool, huh?&lt;/p&gt;
+</code></pre></div></div>
+
+<h3 id="aside">Aside</h3>
+
+<aside>
+<p><b>Aside</b></p>
+<p>This is an <code>aside</code>, it floats to the right and stands out slightly.</p>
+</aside>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;aside&gt;
+&lt;p&gt;Your aside content goes here.&lt;/p&gt;
+&lt;/aside&gt;
+</code></pre></div></div>

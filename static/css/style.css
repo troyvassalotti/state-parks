@@ -1,0 +1,219 @@
+@layer reset, base;
+
+@layer reset {
+  /* Box sizing rules */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  /* Prevent font size inflation */
+  html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+
+  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+  ul[role="list"],
+  ol[role="list"] {
+    list-style: none;
+  }
+
+  /* Set core body defaults */
+  body {
+    line-height: 1.5;
+    margin: 0;
+    min-block-size: 100vh;
+  }
+
+  /* Set shorter line heights on headings and interactive elements */
+  h1,
+  h2,
+  h3,
+  h4,
+  button,
+  input,
+  label {
+    line-height: 1.1;
+  }
+
+  /* Balance text wrapping on headings */
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  /* A elements that don't have a class get default styles */
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+
+  /* Make images easier to work with */
+  img,
+  picture {
+    display: block;
+    max-inline-size: 100%;
+  }
+
+  /* Inherit fonts for inputs and buttons */
+  input,
+  button,
+  textarea,
+  select {
+    cursor: pointer;
+    font: inherit;
+  }
+
+  /* Make sure textareas without a rows attribute are not tiny */
+  textarea:not([rows]) {
+    min-block-size: 10em;
+  }
+
+  /* Anything that has been anchored to should have extra scroll margin */
+  :target {
+    scroll-margin-block: 5ex;
+  }
+
+  /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer base {
+  html {
+    /* FONT SIZING */
+    /* @link https://utopia.fyi/type/calculator?c=320,21,1.2,1600,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+    --step--2: clamp(0.78rem, calc(0.77rem + 0.07vw), 0.84rem);
+    --step--1: clamp(0.94rem, calc(0.91rem + 0.14vw), 1.05rem);
+    --step-0: clamp(1.13rem, calc(1.08rem + 0.23vw), 1.31rem);
+    --step-1: clamp(1.35rem, calc(1.28rem + 0.36vw), 1.64rem);
+    --step-2: clamp(1.62rem, calc(1.51rem + 0.54vw), 2.05rem);
+    --step-3: clamp(1.94rem, calc(1.79rem + 0.78vw), 2.56rem);
+    --step-4: clamp(2.33rem, calc(2.11rem + 1.09vw), 3.2rem);
+    --step-5: clamp(2.8rem, calc(2.5rem + 1.51vw), 4.01rem);
+    --step-6: clamp(3rem, calc(3.25rem + 2.25vw), 5.72rem);
+    --step-7: clamp(4.7rem, calc(4.09rem + 3.06vw), 7.15rem);
+    --step-8: clamp(5.64rem, calc(4.82rem + 4.12vw), 8.94rem);
+    --step-9: clamp(6.77rem, calc(5.67rem + 5.5vw), 11.18rem);
+    --step-10: clamp(8.13rem, calc(6.67rem + 7.3vw), 13.97rem);
+
+    /* SPACING */
+    /* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1600,21,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+    --space-3xs: clamp(0.31rem, calc(0.31rem + 0vw), 0.31rem);
+    --space-2xs: clamp(0.56rem, calc(0.53rem + 0.16vw), 0.69rem);
+    --space-xs: clamp(0.88rem, calc(0.84rem + 0.16vw), 1rem);
+    --space-s: clamp(1.13rem, calc(1.08rem + 0.23vw), 1.31rem);
+    --space-m: clamp(1.69rem, calc(1.61rem + 0.39vw), 2rem);
+    --space-l: clamp(2.25rem, calc(2.16rem + 0.47vw), 2.63rem);
+    --space-xl: clamp(3.38rem, calc(3.23rem + 0.7vw), 3.94rem);
+    --space-2xl: clamp(4.5rem, calc(4.31rem + 0.94vw), 5.25rem);
+    --space-3xl: clamp(6.75rem, calc(6.47rem + 1.41vw), 7.88rem);
+
+    /* ONE-UP PAIRS */
+    --space-3xs-2xs: clamp(0.31rem, calc(0.22rem + 0.47vw), 0.69rem);
+    --space-2xs-xs: clamp(0.56rem, calc(0.45rem + 0.55vw), 1rem);
+    --space-xs-s: clamp(0.88rem, calc(0.77rem + 0.55vw), 1.31rem);
+    --space-s-m: clamp(1.13rem, calc(0.91rem + 1.09vw), 2rem);
+    --space-m-l: clamp(1.69rem, calc(1.45rem + 1.17vw), 2.63rem);
+    --space-l-xl: clamp(2.25rem, calc(1.83rem + 2.11vw), 3.94rem);
+    --space-xl-2xl: clamp(3.38rem, calc(2.91rem + 2.34vw), 5.25rem);
+    --space-2xl-3xl: clamp(4.5rem, calc(3.66rem + 4.22vw), 7.88rem);
+
+    /* CUSTOM PAIRS */
+    --space-s-l: clamp(1.13rem, calc(0.75rem + 1.88vw), 2.63rem);
+
+    /* FONT FAMILIES */
+    --body: ui-rounded, "Hiragino Maru Gothic ProN", Quicksand, Comfortaa,
+      Manjari, "Arial Rounded MT", "Arial Rounded MT Bold", Calibri,
+      source-sans-pro, sans-serif;
+    --headings: "Oli Grotesk", Charter, "Bitstream Charter", "Sitka Text",
+      Cambria, serif;
+
+    /* COLORS */
+    --background: rgb(238, 240, 229);
+    --foreground: rgb(1, 2, 3);
+    --accent-dark: rgb(22, 48, 32);
+    --accent-light: rgb(48, 77, 48);
+    --soft: rgb(182, 196, 182);
+
+    /* STANDARD RULES */
+    accent-color: var(--accent-dark);
+    background-color: var(--background)
+    color: var(--foreground);
+    scrollbar-gutter: stable;
+  }
+
+  body {
+    font-family: var(--body);
+    font-size: var(--step-0);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--headings);
+  }
+
+  h1 {
+    font-size: var(--step-5);
+  }
+
+  h2 {
+    font-size: var(--step-4);
+  }
+
+  h3 {
+    font-size: var(--step-3);
+  }
+
+  h4 {
+    font-size: var(--step-2);
+  }
+
+  h5 {
+    font-size: var(--step-1);
+  }
+
+  h6 {
+    font-size: var(--step-0);
+  }
+
+  a {
+    color: var(--accent-light);
+  }
+
+  button {
+    background-color: var(--soft);
+    border: 1px solid var(--accent-dark);
+    border-radius: .25em;
+    color: var(--foreground);
+    padding-block: .5em;
+    padding-inline: .75em;
+  }
+}
+
+@layer utils {
+  .flow > * + * {
+    margin-block-start: 1em;
+  }
+}

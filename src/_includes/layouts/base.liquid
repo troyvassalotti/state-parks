@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{{ metadata.title }}</title>
+    <meta name="description" content="{{ description or metadata.description }}">
+
+    <link rel="stylesheet" href="https://webfonts.typotheque.com/WF-036345-011398.css" type="text/css"/>
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <meta name="generator" content="{{ eleventy.generator }}">
+    <meta name="canonical" href="{{ metadata.url }}{{ page.url }}">
+  </head>
+  <body>
+    {{ content }}
+  </body>
+</html>

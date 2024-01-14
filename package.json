@@ -1,0 +1,20 @@
+{
+  "name": "state-parks",
+  "version": "1.0.0",
+  "description": "I'm logging my visits to state parks.",
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://stateparks.troyv.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/troyvassalotti/state-parks"
+  },
+  "scripts": {
+    "build": "npx eleventy",
+    "start": "npx eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0-alpha.4"
+  }
+}
