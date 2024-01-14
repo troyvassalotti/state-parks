@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>{{ metadata.title }}</title>
-    <meta name="description" content="{{ description or metadata.description }}">
+    <title>{{ metadata.title }} | {{ title }}</title>
+
+    {% if description %}
+    <meta name="description" content="{{ description }}">
+    {% else %}
+    <meta name="description" content="{{ metadata.description }}">
+    {% endif %}
 
     <link rel="stylesheet" href="https://webfonts.typotheque.com/WF-036345-011398.css" type="text/css"/>
     <link rel="stylesheet" href="/static/css/style.css">
@@ -15,5 +20,17 @@
   </head>
   <body>
     {{ content }}
+
+    <footer class="site-footer flow u-text-center">
+      <section class="flow flow--less" aria-labelledby="footer-label">
+        <h2 id="footer-label" class="u-step-1">{{ metadata.title }}</h2>
+        <p id="footer-description">{{ metadata.description }}</p>
+      </section>
+      <nav aria-label="Primary Navigation" class="footer-navigation">
+        <a href="/">Home</a>
+        <a href="/archive">Archive</a>
+        <a href="https://www.troyv.dev/" rel="me">Me</a>
+      </nav>
+    </footer>
   </body>
 </html>

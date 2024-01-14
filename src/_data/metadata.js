@@ -1,6 +1,6 @@
 export default {
   title: "State Parks",
-  description: "My journey through the state parks.",
+  description: "A website documenting my journey visiting the state parks.",
   domain: "stateparks.troyv.dev",
   get url() {
     return `https://${this.domain}`;

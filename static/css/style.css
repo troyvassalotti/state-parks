@@ -152,10 +152,11 @@
     --accent-dark: rgb(22, 48, 32);
     --accent-light: rgb(48, 77, 48);
     --soft: rgb(182, 196, 182);
+    --white: white;
 
     /* STANDARD RULES */
     accent-color: var(--accent-dark);
-    background-color: var(--background)
+    background-color: var(--background);
     color: var(--foreground);
     scrollbar-gutter: stable;
   }
@@ -200,20 +201,169 @@
 
   a {
     color: var(--accent-light);
+    text-decoration: 1px underline;
+    transition: text-decoration ease 0.2s;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration-thickness: 0.25em;
+    }
   }
 
-  button {
+  button,
+  .button {
+    appearance: none;
     background-color: var(--soft);
     border: 1px solid var(--accent-dark);
-    border-radius: .25em;
+    border-radius: 0.25em;
     color: var(--foreground);
-    padding-block: .5em;
-    padding-inline: .75em;
+    display: inline-block;
+    font-weight: 700;
+    padding-block: 0.5em;
+    padding-inline: 0.75em;
+    text-decoration: none;
+    transition: background-color ease 0.2s;
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--white);
+    }
+  }
+
+  .site-footer {
+    background-color: var(--accent-dark);
+    color: var(--white);
+    inset-block-start: 100dvh;
+    padding-block: var(--space-m);
+    padding-inline: var(--space-l);
+    position: sticky;
+
+    & a {
+      color: var(--white);
+    }
+  }
+
+  .footer-navigation {
+    align-items: center;
+    display: flex;
+    gap: var(--space-s);
+    justify-content: center;
+
+    & a {
+      display: inline-block;
+    }
+  }
+
+  .park-title {
+    font-size: var(--step-6);
+    line-height: 1;
+
+    @media (min-width: 50rem) {
+      font-size: var(--step-8);
+    }
   }
 }
 
 @layer utils {
   .flow > * + * {
-    margin-block-start: 1em;
+    margin-block-start: var(--flow-space, 1em);
+  }
+
+  .flow--less {
+    --flow-space: 0.5em;
+  }
+
+  .flow--more {
+    --flow-space: 1.5em;
+  }
+
+  .wrapper {
+    inline-size: min(
+      100% - var(--wrapper-padding, 4rem),
+      var(--wrapper-size, 80rem)
+    );
+    margin-inline: auto;
+
+    &.constrain--more {
+      --wrapper-size: 65rem;
+    }
+
+    &.constrain--most {
+      --wrapper-size: 50rem;
+    }
+
+    &.constrain--less {
+      --wrapper-size: 100rem;
+    }
+  }
+
+  .visually-hidden:not(:focus):not(:active) {
+    block-size: 1px;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    inline-size: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+  }
+
+  .u-step-10 {
+    font-size: var(--step-10);
+  }
+
+  .u-step-9 {
+    font-size: var(--step-9);
+  }
+
+  .u-step-8 {
+    font-size: var(--step-8);
+  }
+
+  .u-step-7 {
+    font-size: var(--step-7);
+  }
+
+  .u-step-6 {
+    font-size: var(--step-6);
+  }
+
+  .u-step-5 {
+    font-size: var(--step-5);
+  }
+
+  .u-step-4 {
+    font-size: var(--step-4);
+  }
+
+  .u-step-3 {
+    font-size: var(--step-3);
+  }
+
+  .u-step-2 {
+    font-size: var(--step-2);
+  }
+
+  .u-step-1 {
+    font-size: var(--step-1);
+  }
+
+  .u-step-0 {
+    font-size: var(--step-0);
+  }
+
+  .u-step--1 {
+    font-size: var(--step--1);
+  }
+
+  .u-step--2 {
+    font-size: var(--step--2);
+  }
+
+  .u-text-center {
+    text-align: center;
+  }
+
+  .u-truncate :is(p, ul, ol) {
+    max-inline-size: var(--readable-length, 70ch);
   }
 }
