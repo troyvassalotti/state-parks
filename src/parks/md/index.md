@@ -1,6 +1,7 @@
 ---
-title: Maryland State Parks
-layout: base
+title: Maryland
+layout: state
+flag: "md.webp"
 "override:permalink": "/md/"
 ---
 

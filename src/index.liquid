@@ -4,6 +4,12 @@ description: Welcome
 layout: base
 ---
 
+<ul>
+{% for page in collections.all %}
+  <li><a href="{{ page.url }}">{{ page.data.title }}</a></li>
+{% endfor %}
+</ul>
+
 <h2 id="basic-typography">Rock Creek State Park</h2>
 
 <p>All the typography of Simple.css uses <code class="language-plaintext highlighter-rouge">rem</code> for sizing. This means that accessibility is maintained for those who change their browser font size. The <code class="language-plaintext highlighter-rouge">body</code> element has a size of <code class="language-plaintext highlighter-rouge">1.15rem</code>  which makes all the standard font sizes slightly larger. This equates to <code class="language-plaintext highlighter-rouge">18.4px</code> for paragraph text, instead of the standard <code class="language-plaintext highlighter-rouge">16px</code>.</p>

@@ -262,6 +262,45 @@
       font-size: var(--step-8);
     }
   }
+
+  .state-header {
+    display: grid;
+    block-size: max(350px, 50vh);
+
+    & .state-flag {
+      block-size: 100%;
+      grid-area: 1 / -1;
+      inline-size: 100%;
+      object-fit: cover;
+    }
+
+    & .state-header-content {
+      align-items: center;
+      background: radial-gradient(
+          ellipse at center,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0) 37%,
+          rgba(0, 0, 0, 0.65) 100%
+        )
+        no-repeat center center scroll;
+      display: flex;
+      grid-area: 1 / -1;
+      justify-content: center;
+      padding: var(--space-l);
+    }
+
+    & .state-title {
+      color: var(--white);
+      font-size: var(--step-6);
+      overflow-wrap: anywhere;
+      text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+      text-transform: uppercase;
+
+      @media (min-width: 50rem) {
+        font-size: var(--step-8);
+      }
+    }
+  }
 }
 
 @layer utils {
