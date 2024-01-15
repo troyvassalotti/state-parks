@@ -6,14 +6,24 @@
     
     <title>{{ metadata.title }} | {{ title }}</title>
 
+    <script async src="https://esm.sh/es-module-shims@1.8.2"></script>
+		<script type="importmap">
+			{
+				"imports": {
+					"lit": "https://esm.sh/lit@3.1.1",
+					"cloudysky": "https://esm.sh/@troyv/cloudysky@1.0.5"
+				}
+			}
+		</script>
+
+    <link rel="stylesheet" href="https://webfonts.typotheque.com/WF-036345-011398.css" type="text/css"/>
+    <link rel="stylesheet" href="/static/css/style.css">
+
     {% if description %}
     <meta name="description" content="{{ description }}">
     {% else %}
     <meta name="description" content="{{ metadata.description }}">
     {% endif %}
-
-    <link rel="stylesheet" href="https://webfonts.typotheque.com/WF-036345-011398.css" type="text/css"/>
-    <link rel="stylesheet" href="/static/css/style.css">
 
     <meta name="generator" content="{{ eleventy.generator }}">
     <meta name="canonical" href="{{ metadata.url }}{{ page.url }}">
@@ -31,7 +41,7 @@
         <a href="/archive">Archive</a>
         <a href="https://www.troyv.dev/" rel="me">Me</a>
       </nav>
-      <p class="last-updated u-step--2">Last updated: {{ page.date }}</p>
+      <p class="last-updated u-step--2">Last updated: {{ generated }}</p>
     </footer>
   </body>
 </html>

@@ -2,12 +2,53 @@
 layout: base
 ---
 
-<header class="state-header" style="--flag: url(/static/img/{{ flag }})">
+{%- assign visited_parks = collections[state_code].length -%}
+{%- capture formatted_visited_parks -%}
+  {%- if visited_parks -%}
+    {{ visited_parks }}
+  {%- else -%}
+    0
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture total_parks -%}
+  {{ parks.length | plus: formatted_visited_parks }}
+{%- endcapture -%}
+
+<header class="state-header">
   <img class="state-flag" src="/static/img/{{ flag }}" alt="">
   <div class="state-header-content">
     <h1 class="state-title">{{ title }}</h1>
+    <p class="park-visit-count">{{ formatted_visited_parks }} of {{ total_parks }} visited.</p>
   </div>
 </header>
-<main class="main">
-  {{ content }}
+<main class="main main--state wrapper flow u-truncate">
+  <div class="state-meta flow">
+    {{ content }}
+  </div>
+  <hr class="divider"/>
+  <div class="state-parks u-grid" data-grid-columns="fluid">
+    {%- if visited_parks -%}
+      <div class="visited-parks flow">
+        <h2 class="park-section-title">Visited Parks</h2>
+        <ul class="visited-parks-list">
+          {%- for park in collections[state_code] -%}
+            <li class="visited-park">
+              <a href="{{ park.url }}">{{ park.data.title }}</a> - <time class="visited-park-date" datetime="{{ park.data.date | yyyymmdd }}">{{ park.date | dateString }}</time>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+    {%- endif -%}
+    {%- if parks.length -%}
+      <div class="unvisited-parks flow">
+        <h2 class="park-section-title">Remaining Parks</h2>
+        <ul class="unvisited-parks-list">
+          {%- for park in parks -%}
+            <li>{{ park }}</li>
+          {%- endfor -%}
+        </ul>
+      </div>
+    {%- endif -%}
+  </div>
 </main>
