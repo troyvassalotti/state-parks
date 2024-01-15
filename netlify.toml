@@ -15,8 +15,8 @@ X-Content-Type-Options = "nosniff"
 X-Frame-Options = "SAMEORIGIN"
 X-XSS-Protection = "1"
 
-#[[redirects]]
-#from = "https://nifty-dubinsky-1f8fdd.netlify.app/*"
-#to = "https://stateparks.troyv.dev/:splat"
-#status = 301
-#force = true
+[[redirects]]
+from = "https://cheery-flan-2e1be4.netlify.app/*"
+to = "https://stateparks.troyv.dev/:splat"
+status = 301
+force = true
