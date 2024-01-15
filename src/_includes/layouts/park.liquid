@@ -11,7 +11,9 @@ layout: base
     <header class="park-header flow">
       <h1 class="park-title">{{ title }}</h1>
       <div class="park-meta">
-        <span class="park-date">{{ date | dateString }}</span> | <span class="park-location"><a href="/{{ state | downcase }}/">{{ state }}</a></span> | <span class="park-weather">{{ weather }}</span>
+        <span class="park-date">{% include 'calendar.svg' %} {{ date | dateString }}</span>
+        <span class="park-location">{% include 'map.svg' %} <a href="/{{ state | downcase }}/">{{ state }}</a></span>
+        <span class="park-weather">{% include 'cloud.svg' %} {{ weather }}</span>
       </div>
       <hr class="divider"/>
     </header>

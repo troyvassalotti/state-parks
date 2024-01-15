@@ -3,6 +3,7 @@ title: Maryland
 layout: state
 state_code: MD
 flag: md.webp
+"override:tags": [state]
 permalink: /md/
 parks:
   - Assateague State Park

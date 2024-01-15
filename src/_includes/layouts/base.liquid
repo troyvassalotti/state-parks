@@ -7,24 +7,25 @@
     <title>{{ metadata.title }} | {{ title }}</title>
 
     <script async src="https://esm.sh/es-module-shims@1.8.2"></script>
-		<script type="importmap">
-			{
-				"imports": {
-					"lit": "https://esm.sh/lit@3.1.1",
-					"cloudysky": "https://esm.sh/@troyv/cloudysky@1.0.5"
-				}
-			}
-		</script>
+    <script type="importmap">
+      {
+        "imports": {
+          "lit": "https://esm.sh/lit@3.1.1",
+          "cloudysky": "https://esm.sh/@troyv/cloudysky@1.0.5"
+        }
+      }
+    </script>
+    <script type="module" src="https://esm.sh/@zachleat/snow-fall"></script>
 
     <link rel="stylesheet" href="https://webfonts.typotheque.com/WF-036345-011398.css" type="text/css"/>
     <link rel="stylesheet" href="/static/css/style.css">
+    {% if description -%}
+      <meta name="description" content="{{ description }}">
+    {%- else -%}
+      <meta name="description" content="{{ metadata.description }}">
+    {%- endif -%}
 
-    {% if description %}
-    <meta name="description" content="{{ description }}">
-    {% else %}
-    <meta name="description" content="{{ metadata.description }}">
-    {% endif %}
-
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍃</text></svg>">
     <meta name="generator" content="{{ eleventy.generator }}">
     <meta name="canonical" href="{{ metadata.url }}{{ page.url }}">
   </head>
@@ -38,10 +39,13 @@
       </section>
       <nav aria-label="Primary Navigation" class="footer-navigation">
         <a href="/">Home</a>
-        <a href="/archive">Archive</a>
+        <a href="/md/">Archive</a>
         <a href="https://www.troyv.dev/" rel="me">Me</a>
       </nav>
       <p class="last-updated u-step--2">Last updated: {{ generated }}</p>
+
+      <!-- Put snow-fall here so it plays well with the footer's CSS positioning -->
+      <snow-fall></snow-fall>
     </footer>
   </body>
 </html>
