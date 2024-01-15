@@ -329,7 +329,7 @@
     }
 
     & .state-title {
-      font-size: var(--step-6);
+      font-size: var(--step-4);
       text-transform: uppercase;
 
       @media (min-width: 50rem) {
