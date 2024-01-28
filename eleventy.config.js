@@ -1,3 +1,5 @@
+import "dotenv/config";
+
 export default function (config) {
   config.addPassthroughCopy("static");
 
@@ -8,7 +10,7 @@ export default function (config) {
   });
 
   config.addFilter("dateString", (date) =>
-    date.toUTCString().replace(/\s00:00:00\sGMT/g, ""),
+    new Date(date).toUTCString().replace(/\s\d+:\d+:\d+\sGMT/g, ""),
   );
 
   config.addFilter("yyyymmdd", (date) => {

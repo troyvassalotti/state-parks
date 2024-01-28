@@ -55,7 +55,8 @@
 
   /* Make images easier to work with */
   img,
-  picture {
+  picture,
+  video {
     display: block;
     max-inline-size: 100%;
   }
@@ -72,6 +73,22 @@
   /* Make sure textareas without a rows attribute are not tiny */
   textarea:not([rows]) {
     min-block-size: 10em;
+  }
+
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+
+  sub {
+    bottom: -0.25em;
+  }
+
+  sup {
+    top: -0.5em;
   }
 
   /* Anything that has been anchored to should have extra scroll margin */
@@ -255,12 +272,12 @@
   }
 
   .park-title {
-    font-size: var(--step-6);
+    font-size: var(--step-5);
     line-height: 1;
     overflow-wrap: anywhere;
 
     @media (min-width: 50rem) {
-      font-size: var(--step-8);
+      font-size: var(--step-7);
     }
   }
 
@@ -269,20 +286,21 @@
   }
 
   .park-meta {
-    align-items: baseline;
+    align-items: center;
     display: flex;
-    font-size: var(--step--1);
+    flex-wrap: wrap;
     gap: var(--space-xs);
 
     & > * {
       align-items: center;
       display: flex;
+      flex-wrap: wrap;
       gap: 0.5ch;
     }
 
-    & .feather {
-      block-size: var(--step--1);
-      inline-size: var(--step--1);
+    & :is(svg, img) {
+      max-block-size: var(--step-0);
+      max-inline-size: var(--step-0);
     }
   }
 
@@ -344,7 +362,7 @@
   }
 
   .divider {
-    inline-size: max(150px, 25%);
+    inline-size: max(150px, 45%);
     border-color: var(--accent-light);
   }
 }

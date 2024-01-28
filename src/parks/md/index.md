@@ -45,7 +45,6 @@ parks:
   - North Point State Battlefield
   - North Point State Park
   - Palmer State Park
-  - Patapsco Valley State Park
   - Patuxent River State Park
   - Pocomoke River State Park
   - Point Lookout State Park

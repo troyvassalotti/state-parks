@@ -2,6 +2,8 @@
 layout: base
 ---
 
+{%- assign climate = weather.weather[0] -%}
+
 <script type="module">
   import { CloudySky } from "cloudysky";
 </script>
@@ -11,13 +13,16 @@ layout: base
     <header class="park-header flow">
       <h1 class="park-title">{{ title }}</h1>
       <div class="park-meta">
-        <span class="park-date">{% include 'calendar.svg' %} {{ date | dateString }}</span>
-        <span class="park-location">{% include 'map.svg' %} <a href="/{{ state | downcase }}/">{{ state }}</a></span>
-        <span class="park-weather">{% include 'cloud.svg' %} {{ weather }}</span>
+        <div class="park-date">{% include 'calendar.svg' %}<time datetime="{{ date | yyyymmdd }}">{{ date | dateString }}</time></div>
+        <div class="park-location">{% include 'map.svg' %}<a href="/{{ state | downcase }}/">{{ state }}</a></div>
+        <div class="park-weather">
+          <img src="https://openweathermap.org/img/wn/{{ climate.icon }}@2x.png" alt="Icon representing {{ climate.description }}"/>
+          <span>{{ climate.main }}, {{ weather.feels_like }}<sup>&deg;</sup></span>
+        </div>
       </div>
       <hr class="divider"/>
     </header>
-    <main class="main">
+    <main class="main flow">
       {{ content }}
     </main>
   </div>
