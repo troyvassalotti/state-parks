@@ -2,7 +2,7 @@ export default {
   layout: "park",
   tags: ["park"],
   permalink: function ({ state, title }) {
-    return `${state.toLowerCase()}/${this.slugify(title)}`;
+    return `${state.toLowerCase()}/${this.slugify(title)}/index.html`;
   },
   eleventyComputed: {
     // https://openweathermap.org/api/one-call-3#hist_parameter
