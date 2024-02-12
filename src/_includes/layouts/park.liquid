@@ -5,10 +5,10 @@ layout: base
 {%- assign climate = weather.weather[0] -%}
 
 <script type="module">
-  import { CloudySky } from "cloudysky";
+  import CloudySky from "cloudysky";
 </script>
 
-<cloudy-sky class="park-sky">
+<cloudy-sky class="park-sky" force-color-scheme="light">
   <div class="wrapper constrain--more">
     <header class="park-header flow">
       <h1 class="park-title">{{ title }}</h1>
