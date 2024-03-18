@@ -15,7 +15,8 @@ layout: basic
   <p>Here's the most recent park I've visited:</p>
   <ol>
     {%- if collections.park -%}
-      {%- for park in collections.park -%}
+      {%- assign parks = collections.park | reverse -%}
+      {%- for park in parks limit:1 -%}
         <li><a href="{{ park.url }}">{{ park.data.title }}</a> on {{ park.date | dateString }}</li>
       {%- endfor -%}
     {%- else -%}

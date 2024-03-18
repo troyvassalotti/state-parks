@@ -28,7 +28,6 @@ parks:
   - Gathland State Park
   - Greenbrier State Park
   - Greenwell State Park
-  - Gunpowder Falls State Park
   - Hallowing Point Waterfront Park
   - Harriet Tubman Underground Railroad State Park
   - Hart-Miller Island State Park
