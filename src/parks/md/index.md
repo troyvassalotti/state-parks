@@ -47,7 +47,6 @@ parks:
   - Patuxent River State Park
   - Pocomoke River State Park
   - Point Lookout State Park
-  - Rocks State Park
   - Rocky Gap State Park
   - Rosaryville State Park
   - Sandy Point State Park
