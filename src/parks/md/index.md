@@ -24,7 +24,6 @@ parks:
   - Fair Hill Natural Resources Management Area
   - Fort Frederick State Park
   - Franklin Point State Park
-  - Gambrill State Park
   - Gathland State Park
   - Greenbrier State Park
   - Greenwell State Park
