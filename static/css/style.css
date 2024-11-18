@@ -61,6 +61,11 @@
     max-inline-size: 100%;
   }
 
+  /* Don't listen to the HTML height attribute */
+  img[height] {
+    block-size: auto;
+  }
+
   /* Inherit fonts for inputs and buttons */
   input,
   button,

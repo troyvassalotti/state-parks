@@ -8,6 +8,12 @@ skip_processing = true
 [build.environment]
 NODE_VERSION = "node"
 
+[[plugins]]
+package = "netlify-plugin-cache"
+
+[plugins.inputs]
+paths = [".cache"]
+
 [[headers]]
 for = "/*"
 [headers.values]

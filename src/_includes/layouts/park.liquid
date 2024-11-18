@@ -16,7 +16,7 @@ layout: base
         <div class="park-date">{% include 'calendar.svg' %}<time datetime="{{ date | yyyymmdd }}">{{ date | dateString }}</time></div>
         <div class="park-location">{% include 'map.svg' %}<a href="/{{ state | downcase }}/">{{ state }}</a></div>
         <div class="park-weather">
-          <img src="https://openweathermap.org/img/wn/{{ climate.icon }}@2x.png" alt="Icon representing {{ climate.description }}"/>
+          <img eleventy:ignore src="https://openweathermap.org/img/wn/{{ climate.icon }}@2x.png" alt="Icon representing {{ climate.description }}"/>
           <span>{{ climate.main }}, {{ weather.feels_like }}<sup>&deg;</sup></span>
         </div>
       </div>

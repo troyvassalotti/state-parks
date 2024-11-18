@@ -16,7 +16,7 @@ layout: base
 {%- endcapture -%}
 
 <header class="state-header">
-  <img class="state-flag" src="/static/img/{{ flag }}" alt="">
+  <img eleventy:ignore class="state-flag" src="/static/img/{{ flag }}" alt="">
   <div class="state-header-content">
     <h1 class="state-title">{{ title }}</h1>
     <p class="park-visit-count">{{ formatted_visited_parks }} of {{ total_parks }} visited.</p>

@@ -1,7 +1,19 @@
 import "dotenv/config";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 export default function (config) {
   config.addPassthroughCopy("static");
+
+  config.addPlugin(eleventyImageTransformPlugin, {
+    extensions: "html",
+    formats: ["webp", "jpeg", "avif"],
+    widths: [320, 640, 960, 1280],
+    defaultAttributes: {
+      loading: "lazy",
+      decoding: "async",
+      sizes: "auto",
+    },
+  });
 
   config.addFilter("UTC", (value) => {
     let valueDate = new Date(value);
@@ -36,11 +48,11 @@ export default function (config) {
       timeStyle: "long",
     }).format(now);
   });
-
-  return {
-    dir: {
-      input: "src",
-      layouts: "_includes/layouts",
-    },
-  };
 }
+
+export const config = {
+  dir: {
+    input: "src",
+    layouts: "_includes/layouts",
+  },
+};
