@@ -12,12 +12,14 @@
   },
   "scripts": {
     "build": "npx eleventy",
+    "park": "npx plop park",
     "start": "npx eleventy --serve"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-img": "^5.0.0",
     "dotenv": "^16.4.1",
-    "netlify-plugin-cache": "^1.0.3"
+    "netlify-plugin-cache": "^1.0.3",
+    "plop": "^4.0.1"
   }
 }
