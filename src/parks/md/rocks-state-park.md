@@ -9,10 +9,10 @@ lon: -76.41141352982613
 
 Hiked the trail up to King and Queen Seat at the _Rapids Area_ of Rocks State Park. Got there early enough to avoid most of the heat.
 
-![Close up view of ferns growing out from cracks in the rocks.](https://filedn.com/l2AtqErIm4D4y5Y5yWfgEuz/state-parks/rocks/PXL_20240629_142649980.PORTRAIT.jpg)
+![Close up view of ferns growing out from cracks in the rocks.]({{ "PXL_20240629_142649980.PORTRAIT.jpg" | cdn }})
 
-![A large boulder stands angled upwards with a curved branch from a tree shaping the opposite side.](https://filedn.com/l2AtqErIm4D4y5Y5yWfgEuz/state-parks/rocks/PXL_20240629_140401539.jpg)
+![A large boulder stands angled upwards with a curved branch from a tree shaping the opposite side.]({{ "PXL_20240629_140401539.jpg" | cdn }})
 
-![Looking outward from the top of King and Queen seat, a landscape view of the trees.](https://filedn.com/l2AtqErIm4D4y5Y5yWfgEuz/state-parks/rocks/PXL_20240629_141258124.jpg)
+![Looking outward from the top of King and Queen seat, a landscape view of the trees.]({{ "PXL_20240629_141258124.jpg" | cdn }})
 
-![Side profile of the boulders showing more foliage growing. Someone is preparing to rock climb further down the path.](https://filedn.com/l2AtqErIm4D4y5Y5yWfgEuz/state-parks/rocks/PXL_20240629_142045616.jpg)
+![Side profile of the boulders showing more foliage growing. Someone is preparing to rock climb further down the path.]({{ "PXL_20240629_142045616.jpg" | cdn }})

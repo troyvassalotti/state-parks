@@ -42,7 +42,6 @@ parks:
   - Newtowne Neck State Park
   - North Point State Battlefield
   - Palmer State Park
-  - Patuxent River State Park
   - Pocomoke River State Park
   - Point Lookout State Park
   - Rocky Gap State Park

@@ -41,6 +41,14 @@ export default function (config) {
     return `${year}-${month}-${day}`;
   });
 
+  config.addFilter("cdn", function (value) {
+    const {
+      page: { fileSlug },
+    } = this;
+
+    return `${process.env.CDN}/${fileSlug}/${value}`;
+  });
+
   config.addGlobalData("generated", () => {
     let now = new Date();
     return new Intl.DateTimeFormat("en-US", {

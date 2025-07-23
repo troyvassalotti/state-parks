@@ -316,10 +316,9 @@
 
   .state-header {
     display: grid;
-    block-size: max(350px, 50vh);
 
     & .state-flag {
-      block-size: 100%;
+      block-size: max(350px, 50vh);
       grid-area: 1 / -1;
       inline-size: 100%;
       object-fit: cover;
